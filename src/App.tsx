@@ -41,7 +41,7 @@ export default function App() {
         }
     }
 
-    const getLetterClass = (letter: string, index: number, word: string) => {
+    const getLetterClass = (letter: string, index: number) => {
         if (targetWord[index] === letter) {
             return 'bg-green-500'
         } else if (targetWord.includes(letter)) {
@@ -83,7 +83,7 @@ export default function App() {
                             guesses[rowIndex]?.split('').map((letter, colIndex) => (
                                 <div
                                     key={`${rowIndex}-${colIndex}`}
-                                    className={`w-full aspect-square flex items-center justify-center text-2xl font-bold text-white ${getLetterClass(letter, colIndex, guesses[rowIndex])}`}
+                                    className={`w-full aspect-square flex items-center justify-center text-2xl font-bold text-white ${getLetterClass(letter, colIndex)}`}
                                 >
                                     {letter}
                                 </div>
