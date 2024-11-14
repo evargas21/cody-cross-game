@@ -63,7 +63,7 @@ export default function App() {
                         type="text"
                         value={targetWord}
                         onChange={(e) =>
-                            setTargetWord(e.target.value.toUpperCase().replace(/[^A-ZÑ]/g, '').slice(0, 5))
+                            setTargetWord(e.target.value.toUpperCase().replace(/[^A-ZÑ]/g, ''))
                         }
                         placeholder="Ingresa la palabra objetivo"
                         className={clsx(
