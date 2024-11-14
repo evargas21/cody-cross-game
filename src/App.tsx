@@ -32,13 +32,13 @@ export default function App() {
 
     const handleGuessSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (currentGuess.length === targetWord.length && guesses.length < 6) {
+        if (currentGuess.length === targetWord.length && guesses.length < 5) {
             setGuesses([...guesses, currentGuess]);
             setCurrentGuess('');
 
             if (currentGuess === targetWord) {
                 setGameState('won');
-            } else if (guesses.length === 5) {
+            } else if (guesses.length === targetWord.length) {
                 setGameState('lost');
             }
         }
